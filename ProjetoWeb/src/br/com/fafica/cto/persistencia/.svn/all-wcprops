@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2/trunk/ProjetoWeb/src/br/com/fafica/cto/persistencia
+END
+SemaforoDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/21/trunk/ProjetoWeb/src/br/com/fafica/cto/persistencia/SemaforoDAO.java
+END
+MotoristaDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/21/trunk/ProjetoWeb/src/br/com/fafica/cto/persistencia/MotoristaDAO.java
+END
+MarcaDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/21/trunk/ProjetoWeb/src/br/com/fafica/cto/persistencia/MarcaDAO.java
+END
+UsuarioDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/21/trunk/ProjetoWeb/src/br/com/fafica/cto/persistencia/UsuarioDAO.java
+END
+VeiculoDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/21/trunk/ProjetoWeb/src/br/com/fafica/cto/persistencia/VeiculoDAO.java
+END
