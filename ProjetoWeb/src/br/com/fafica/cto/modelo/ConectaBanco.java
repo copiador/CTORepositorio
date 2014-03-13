@@ -28,7 +28,7 @@ Class.forName("com.mysql.jdbc.Driver");
         
             String url = "jdbc:mysql://localhost:3306/cto";
             String username = "root";        //nome de um usuario de seu BD      
-            String password = "master";      //sua senha de acesso
+            String password = "";      //sua senha de acesso
 
             connection = DriverManager.getConnection(url, username, password);
 

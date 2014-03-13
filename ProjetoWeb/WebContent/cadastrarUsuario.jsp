@@ -73,10 +73,15 @@ function up(lstr){ // converte minusculas em maiusculas
 </script>
 </head>
 <body>
+
+ 
 <jsp:scriptlet> 
 if (session == null || session.getAttribute("usuarioLogado") == null) {
  response.sendRedirect("index.jsp");
-}</jsp:scriptlet>
+}
+
+</jsp:scriptlet>
+
 	<div id="header-wrapper">
 	<div id="header" class="container">
 		<div id="logo">
