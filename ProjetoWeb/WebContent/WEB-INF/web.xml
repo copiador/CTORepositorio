@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>ProjetoWeb</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -58,5 +58,15 @@
   <servlet-mapping>
     <servlet-name>ControladorMarca</servlet-name>
     <url-pattern>/ControladorMarca</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ControladorUsuarioADM</display-name>
+    <servlet-name>ControladorUsuarioADM</servlet-name>
+    <servlet-class>br.com.fafica.cto.servlet.ControladorUsuarioADM</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControladorUsuarioADM</servlet-name>
+    <url-pattern>/ControladorUsuarioADM</url-pattern>
   </servlet-mapping>
 </web-app>
