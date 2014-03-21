@@ -59,11 +59,7 @@ function CadastroVeiculo() {
 	window.onload;
 	var form = document.getElementById("cadastroveiculo");
 	
-	if(form.numero.value == "" || form.numero.value == null){
-		alert("Preencha o campo numero");
-		form.numero.focus();
-		return false;
-	}else if(form.modelo.value == "" || form.modelo.value == null){
+	if(form.modelo.value == "" || form.modelo.value == null){
 		alert("Preencha o campo modelo");
 		form.modelo.focus();
 		return false;

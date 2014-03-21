@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@page import="br.com.fafica.cto.modelo.Marca"%>
+<%@page import="br.com.fafica.cto.persistencia.MarcaDAO"%>
+	
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,6 +27,12 @@
 </head>
 
 <body>
+<% int idMarca = Integer.parseInt(request.getParameter("id"));
+   Marca marca = new Marca();
+   marca.setNumero(idMarca);
+   Marca marcaPesquisada = new MarcaDAO().pesquisarMarca(marca);
+	
+%>
 
 	<div id="header-wrapper">
 		<div id="header" class="container">
@@ -49,20 +58,20 @@
 				<font size="+4" color="#FFFBF0">Cadastro de Marca</font>
 			</h2>
 			<form id="cadastromarca" style="background-color: #069"
-				action="ControladorMarca?cmd=cadastrar"
+				action="ControladorMarca?cmd=alterar&id=<%=marcaPesquisada.getNumero()%>"
 				onsubmit="return CadastroMotorista()" method="post">
 				<table align="center">
 					<tr>
 						<td width="150" height="50" align="center"><b><font
 								size="+1" color="#FFFBF0">Marca :*</font></b></td>
 						<td width="250" align="center"><input type="text" name="marca"
-							onchange="up(this)" /></td>
+							onchange="up(this)" value="<%=marcaPesquisada.getDescricao()%>" /></td>
 					</tr>
 				</table>
 				
 				<table align="center">
 					<tr>
-						<td align="justify"><input type="submit" value="Cadastrar" />
+						<td align="justify"><input type="submit" value="Alterar" />
 							<input type="Reset" value="Cancelar" />
 				</table>
 

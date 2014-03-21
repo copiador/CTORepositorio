@@ -68,13 +68,8 @@ public class SemaforoDAO {
 	public String Alterar(Semaforo semaforo) {
 		String status;
 		try {
-			ps = ConectaBanco.IniciarConexao().prepareStatement("update semaforo" +
-																	" set" +
-																	" sentido=?, " +
-																	" cruzamento=? " +
-																	"	where latitude = ? " +
-																		"and " +
-																		"longitude = ?");
+			ps = ConectaBanco.IniciarConexao()
+					.prepareStatement("update semaforo set sentido=?, cruzamento=? where latitude = ? and longitude = ?");
 			ps.setString(1, semaforo.getSentido());
 			ps.setString(2, semaforo.getCruzamento());
 			ps.setString(3, semaforo.getLatitude());

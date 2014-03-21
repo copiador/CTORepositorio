@@ -62,13 +62,7 @@ lista = new MarcaDAO().Listar(); //Marcas que estão no banco
 		<form id="cadastroveiculo" style="background-color:#069"
 			action="ControladorVeiculo?cmd=cadastrar" onsubmit="return CadastroVeiculo()" method="post">
 			<table align="center">
-	<!-- <tr>
-					<td width="150" height="50" align="center"><b><font size="+1" color="#FFFBF0">Número :*</font></b></td>
-					<td width="163" align="center"><input type="text"
-						name="numero" id="numero" maxlength="6" /></td>
-				</tr>
- -->			
-				<tr>
+			<tr>
 					<td width="150" height="50" align="center"><b><font size="+1" color="#FFFBF0">Modelo: *</font></b></td>
 					<td align="center" width="163"><input type="text"
 						name="modelo" maxlength="20" onchange="up(this)"/></td>

@@ -93,7 +93,8 @@ public class ControladorMarca extends HttpServlet {
 			Marca marca = new Marca();
 			marca.setNumero(Integer.parseInt(request.getParameter("id")));
 			marca.setDescricao(request.getParameter("marca"));
-			
+			System.out.println(marca.getNumero());
+			System.out.println(marca.getDescricao());
 			String status = new MarcaDAO().Alterar(marca);
 			
 			if (status.equalsIgnoreCase("ok")){

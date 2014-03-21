@@ -84,6 +84,8 @@ public class ControladorSemaforo extends HttpServlet {
 		}
 		else if (cmd.equalsIgnoreCase("alterar")){ // Efetuar alteração
 			Semaforo semaforo = new Semaforo(request.getParameter("latitude"), request.getParameter("longitude"));
+			
+			
 			semaforo.setSentido(request.getParameter("sentido"));
 			semaforo.setCruzamento(request.getParameter("cruzamento"));
 			

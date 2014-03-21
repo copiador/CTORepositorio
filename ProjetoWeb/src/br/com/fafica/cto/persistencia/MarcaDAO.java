@@ -11,13 +11,13 @@ import br.com.fafica.cto.modelo.Marca;
 public class MarcaDAO {
 	private PreparedStatement ps;
 	private ResultSet resultado;
-	
+
 	public String Inserir(Marca marca) {
 		String status;
 		try {
-			ps = ConectaBanco.IniciarConexao().prepareStatement("insert into marca (descricao)" +
-																					  " values (?)");
-			ps.setString(1, marca.getDescricao());			
+			ps = ConectaBanco.IniciarConexao().prepareStatement(
+					"insert into marca (descricao)" + " values (?)");
+			ps.setString(1, marca.getDescricao());
 
 			ps.executeUpdate();
 
@@ -25,22 +25,22 @@ public class MarcaDAO {
 			status = "ok";
 			return status;
 		} catch (SQLException erro) {
-			if(erro.getErrorCode() == 1062){
-				status = erro.getMessage()+"- Registro já existi!";
-			}else{
-			status = erro.getMessage()+"\nCodigo - "+erro.getErrorCode();
+			if (erro.getErrorCode() == 1062) {
+				status = erro.getMessage() + "- Registro já existi!";
+			} else {
+				status = erro.getMessage() + "\nCodigo - "
+						+ erro.getErrorCode();
 			}
 			return status;
 		}
 
 	}
+
 	public ArrayList<Marca> Listar() {
 		try {
-			ps = ConectaBanco.IniciarConexao().prepareStatement("select" +
-																	" * " +
-																"from " +
-																	"marca");
-			
+			ps = ConectaBanco.IniciarConexao().prepareStatement(
+					"select" + " * " + "from " + "marca");
+
 			ps.executeQuery();
 			resultado = ps.executeQuery();
 			Marca marca;
@@ -49,25 +49,25 @@ public class MarcaDAO {
 				marca = new Marca();
 				marca.setNumero(resultado.getInt(1));
 				marca.setDescricao(resultado.getString(2));
-				
+
 				lista.add(marca);
 			}
 			ps.close();
 			resultado.close();
 			return lista;
 		} catch (SQLException erro) {
-			System.out.println(erro.getMessage()+"\nCodigo - "+erro.getErrorCode());
+			System.out.println(erro.getMessage() + "\nCodigo - "
+					+ erro.getErrorCode());
 			return null;
 		}
 
 	}
+
 	public String Excluir(Marca marca) {
 		String status;
 		try {
-			ps = ConectaBanco.IniciarConexao().prepareStatement("delete from " +
-																		"marca " +
-																"where " +
-																		"codigo = ?");
+			ps = ConectaBanco.IniciarConexao().prepareStatement(
+					"delete from " + "marca " + "where " + "codigo = ?");
 			ps.setInt(1, marca.getNumero());
 			ps.executeUpdate();
 
@@ -75,36 +75,60 @@ public class MarcaDAO {
 			status = "ok";
 			return status;
 		} catch (SQLException erro) {
-			status = erro.getMessage()+"\nCodigo - "+erro.getErrorCode();
-			
+			status = erro.getMessage() + "\nCodigo - " + erro.getErrorCode();
+
 			return status;
 		}
 
 	}
+
 	public String Alterar(Marca marca) {
 		String status;
 		try {
-			ps = ConectaBanco.IniciarConexao().prepareStatement("update marca " +
-																	"set descricao = ?," +
-																" where codigo=?");
+			ps = ConectaBanco.IniciarConexao().prepareStatement("update marca set descricao = ? where codigo=?");
 			ps.setString(1, marca.getDescricao());
 			ps.setInt(2, marca.getNumero());
 
 			ps.executeUpdate();
 
+			
 			ps.close();
 			status = "ok";
 			return status;
-			
+
 		} catch (SQLException erro) {
-			status = erro.getMessage()+"\nCodigo - "+erro.getErrorCode();
-			
+			status = erro.getMessage() + "\nCodigo - " + erro.getErrorCode();
+
 			return status;
 		}
 
 	}
 
+	public Marca pesquisarMarca(Marca marca) {
 
+		try {
+			ps = ConectaBanco.IniciarConexao().prepareStatement(
+					"select * from marca where codigo = ?");
+			ps.setInt(1, marca.getNumero());
+			resultado = ps.executeQuery();
 
+			if (resultado.next()) {
+
+				marca.setDescricao(resultado.getString(2));
+				ps.close();
+				resultado.close();
+
+			}
+
+			return marca;
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return marca;
+
+	}
 
 }
