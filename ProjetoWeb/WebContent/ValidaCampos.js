@@ -24,6 +24,11 @@ function CadastroUsuario() {
 		alert("Preencha o campo nome");
 		form.nome.focus();
 		return false;
+	}
+	if(!isNaN(form.nome.value) ){
+		alert("Preencha o campo com letras");
+		form.nome.focus();
+		return false;
 	}else if(form.cpf.value == "" || form.cpf.value == null){
 		alert("Preencha o campo CPF");
 		form.cpf.focus();
@@ -115,7 +120,13 @@ function CadastroMotorista() {
 		alert("Preencha o campo nome");
 		form.nome.focus();
 		return false;
-	}else if(form.cpf.value == "" || form.cpf.value == null){
+	}
+	if(!isNaN(form.nome.value) ){
+		alert("Preencha o campo com letras");
+		form.nome.focus();
+		return false;
+	}
+	else if(form.cpf.value == "" || form.cpf.value == null){
 		alert("Preencha o campo CPF");
 		form.cpf.focus();
 		return false;
