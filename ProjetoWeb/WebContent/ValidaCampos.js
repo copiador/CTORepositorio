@@ -24,8 +24,7 @@ function CadastroUsuario() {
 		alert("Preencha o campo nome");
 		form.nome.focus();
 		return false;
-	}
-	if(!isNaN(form.nome.value) ){
+	}else if(!isNaN(form.nome.value) ){
 		alert("Preencha o campo com letras");
 		form.nome.focus();
 		return false;
@@ -96,11 +95,21 @@ function CadastroSemaforo() {
 		alert("Preencha o campo latitude");
 		form.latitude.focus();
 		return false;
-	}else if(form.longitude.value == "" || form.longitude.value == null){
+	}else if(isNaN(form.latitude.value)){
+		alert("Preencha o campo latitude com numeros");
+		form.latitude.focus();
+		return false;
+	}
+	if(form.longitude.value == "" || form.longitude.value == null){
 		alert("Preencha o campo longitude");
 		form.longitude.focus();
 		return false;
-	}else if(form.sentido[0].checked == false && form.sentido[1].checked == false){
+	}else if(isNaN(form.longitude.value)){
+		alert("Preencha o campo longitude com numeros");
+		form.longitude.focus();
+		return false;
+	}
+	if(form.sentido[0].checked == false && form.sentido[1].checked == false){
 		alert("Selecione o sentido");
 		return false;	
 	}
@@ -174,4 +183,5 @@ function CadastroMarca() {
 	}else {
 		return true;
 	}
+	
 }
