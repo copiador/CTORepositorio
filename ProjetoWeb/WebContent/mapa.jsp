@@ -55,16 +55,15 @@
 		</div>
 		<div id="menu">
 				<ul>
-					<li class="current_page_item"><a href="home.jsp" accesskey="1" title="">Homepage</a></li>
-					<li><a href="#" accesskey="2" title="">Cadastros</a></li>
-					<li><a href="#" accesskey="3" title="">Listar</a></li>
-					<li><a href="ControladorUsuario?cmd=logout" accesskey="4" title="">Sair</a></li>
+					<li><a href="home.jsp" accesskey="1" title="">Homepage</a></li>
+					<li class="current_page_item"><a href="mapa.jsp" accesskey="2" title="">Google Maps - Caruaru</a></li>
+					<li><a href="ControladorUsuario?cmd=logout" accesskey="3" title="">Sair</a></li>
 				</ul>
 			</div>
 	</div>
 
 </div>
-<div id="map_canvas" style="width:100%; height:60%"></div>
+<div id="map_canvas" style="width:100%; height:66%"></div>
 <div id="copyright" class="container">
 	<p>Developed By: UppSoftware (c) 2013 UppSoftware.ltda . Todos os direitos reservados. | Design by <a href="http://www.facebook.com.br/diego.vaz.gomes" target="_blank" rel="nofollow">Diêgo Vaz Gomes</a>.</p>
 		</div>

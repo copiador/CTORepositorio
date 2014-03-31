@@ -30,8 +30,7 @@ if (session == null || session.getAttribute("usuarioLogado") == null) {
 			<ul>
 				<li class="current_page_item"><a href="home.jsp" accesskey="1" title="">Homepage</a></li>
 				<li><a href="sistema.jsp" accesskey="2" title="">Sistema</a></li>
-				
-				
+				<li><a href="mapa.jsp" accesskey="3" title="">Google Maps - Caruaru</a></li>				
                 <li><a href="ControladorUsuario?cmd=logout" accesskey="4" title="">Sair</a></li>
 			</ul>
 		</div>
