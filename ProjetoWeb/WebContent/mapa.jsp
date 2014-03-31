@@ -26,7 +26,7 @@
         
         var nMusic = new google.maps.Marker({
             position: lat_long_nMusic,
-            title:"Nova Music"
+            title:"N. Music"
         });
         
         var correios = new google.maps.Marker({
