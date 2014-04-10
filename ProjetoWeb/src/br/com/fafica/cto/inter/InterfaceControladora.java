@@ -18,28 +18,28 @@ public interface InterfaceControladora {
 	public Marca pesquisarMarca(Marca marca);
 
 	// MOTORISTA
-	public void cadastrarMotorista(Motorista motorista);
-	public void excluirMotorista(Motorista motorista);
+	public String cadastrarMotorista(Motorista motorista);
+	public String excluirMotorista(Motorista motorista);
 	public ArrayList<Motorista> listarMotorista();
-	public void alterarMotorista(Motorista motorista);
+	public String alterarMotorista(Motorista motorista);
 	public Motorista pesquisarMotoristaID(Motorista motorista);
 	// SEMAFORO
-	public void cadastrarSemaforo(Semaforo semaforo);
-	public void excluirSemaforo(Semaforo semaforo);
+	public String cadastrarSemaforo(Semaforo semaforo);
+	public String excluirSemaforo(Semaforo semaforo);
 	public ArrayList<Semaforo> listarSemaforo();
 	public Semaforo pequisarSemaforoLatLong(Semaforo semaforo);
 	// USUARIO
-	public void cadastrarUsuario(Usuario usuario);
-	public void excluirUsuario(Usuario usuario);
+	public String cadastrarUsuario(Usuario usuario);
+	public String excluirUsuario(Usuario usuario);
 	public ArrayList<Usuario>listarUsuario();
 	public String verificaUsuario(Usuario usuario);
-	public void alterarUsuario(Usuario usuario);
-	public void pesquisarID(Usuario usuario);
+	public String alterarUsuario(Usuario usuario);
+	public Usuario pesquisarID(Usuario usuario);
 	// VEICULO
-	public void cadastrarVeiculo(Veiculo veiculo);
-	public void excluirVeiculo(Veiculo veiculo);
-	public void alterarVeiculo(Veiculo veiculo);
-	public void pesquisaVeiculo(Veiculo veiculo);
+	public String cadastrarVeiculo(Veiculo veiculo);
+	public String excluirVeiculo(Veiculo veiculo);
+	public String alterarVeiculo(Veiculo veiculo);
+	public Veiculo pesquisaVeiculo(Veiculo veiculo);
 	public ArrayList<Veiculo> listaVeiculo();
 	
 

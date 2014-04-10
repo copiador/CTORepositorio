@@ -64,128 +64,128 @@ public class Controladora implements InterfaceControladora{
 	//MOTORISTA
 
 	@Override
-	public void cadastrarMotorista(Motorista motorista) {
-		// TODO Auto-generated method stub
+	public String cadastrarMotorista(Motorista motorista) {
+		return repositorioMotorista.Inserir(motorista);
 		
 	}
 
 	@Override
-	public void excluirMotorista(Motorista motorista) {
-		// TODO Auto-generated method stub
+	public String excluirMotorista(Motorista motorista) {
+		return repositorioMotorista.Excluir(motorista);
 		
 	}
 
 	@Override
 	public ArrayList<Motorista> listarMotorista() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return repositorioMotorista.Listar();
 	}
 
 	@Override
-	public void alterarMotorista(Motorista motorista) {
-		// TODO Auto-generated method stub
+	public String alterarMotorista(Motorista motorista) {
+		return repositorioMotorista.Alterar(motorista);
 		
 	}
 
 	@Override
 	public Motorista pesquisarMotoristaID(Motorista motorista) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return repositorioMotorista.PesquisarID(motorista);
 	}
 	
 	//SEMAFORO
 
 	@Override
-	public void cadastrarSemaforo(Semaforo semaforo) {
-		// TODO Auto-generated method stub
+	public String cadastrarSemaforo(Semaforo semaforo) {
+		return repositorioSemaforo.Inserir(semaforo);
 		
 	}
 
 	@Override
-	public void excluirSemaforo(Semaforo semaforo) {
-		// TODO Auto-generated method stub
+	public String excluirSemaforo(Semaforo semaforo) {
+		return repositorioSemaforo.Excluir(semaforo);
 		
 	}
 
 	@Override
 	public ArrayList<Semaforo> listarSemaforo() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return repositorioSemaforo.Listar();
 	}
 
 	@Override
 	public Semaforo pequisarSemaforoLatLong(Semaforo semaforo) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return repositorioSemaforo.PesquisaUnica(semaforo);
 	}
 
 	//USUARIO
 	
 	@Override
-	public void cadastrarUsuario(Usuario usuario) {
-		// TODO Auto-generated method stub
+	public String cadastrarUsuario(Usuario usuario) {
+		return repositorioUsuario.Inserir(usuario);
 		
 	}
 
 	@Override
-	public void excluirUsuario(Usuario usuario) {
-		// TODO Auto-generated method stub
+	public String excluirUsuario(Usuario usuario) {
+		return repositorioUsuario.Excluir(usuario);
 		
 	}
 
 	@Override
 	public ArrayList<Usuario> listarUsuario() {
-		// TODO Auto-generated method stub
-		return null;
+	
+		return repositorioUsuario.Listar();
 	}
 
 	@Override
 	public String verificaUsuario(Usuario usuario) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return repositorioUsuario.Verificar(usuario);
 	}
 
 	@Override
-	public void alterarUsuario(Usuario usuario) {
-		// TODO Auto-generated method stub
+	public String alterarUsuario(Usuario usuario) {
+		return repositorioUsuario.Alterar(usuario);
 		
 	}
 
 	@Override
-	public void pesquisarID(Usuario usuario) {
-		// TODO Auto-generated method stub
+	public Usuario pesquisarID(Usuario usuario) {
+		return repositorioUsuario.PesquisarID(usuario);
 		
 	}
 
 	//VEICULO
 	@Override
-	public void cadastrarVeiculo(Veiculo veiculo) {
-		// TODO Auto-generated method stub
+	public String cadastrarVeiculo(Veiculo veiculo) {
+		return repositorioVeiculo.Inserir(veiculo);
 		
 	}
 
 	@Override
-	public void excluirVeiculo(Veiculo veiculo) {
-		// TODO Auto-generated method stub
+	public String excluirVeiculo(Veiculo veiculo) {
+		return repositorioVeiculo.Excluir(veiculo);
 		
 	}
 
 	@Override
-	public void alterarVeiculo(Veiculo veiculo) {
-		// TODO Auto-generated method stub
+	public String alterarVeiculo(Veiculo veiculo) {
+		return repositorioVeiculo.Alterar(veiculo);
 		
 	}
 
 	@Override
-	public void pesquisaVeiculo(Veiculo veiculo) {
-		// TODO Auto-generated method stub
+	public Veiculo pesquisaVeiculo(Veiculo veiculo) {
+		return repositorioVeiculo.PesquisarNum(veiculo);
 		
 	}
 
 	@Override
 	public ArrayList<Veiculo> listaVeiculo() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return repositorioVeiculo.Listar();
 	}
 
 }
