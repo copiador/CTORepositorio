@@ -2,6 +2,8 @@ package br.com.fafica.cto.controladora;
 
 import java.util.ArrayList;
 
+import br.com.fafica.cto.exception.CampoVasioExpection;
+import br.com.fafica.cto.exception.Validacao;
 import br.com.fafica.cto.inter.InterfaceControladora;
 import br.com.fafica.cto.modelo.Marca;
 import br.com.fafica.cto.modelo.Motorista;
@@ -21,6 +23,7 @@ public class Controladora implements InterfaceControladora{
 	private SemaforoDAO repositorioSemaforo;
 	private UsuarioDAO repositorioUsuario;
 	private VeiculoDAO repositorioVeiculo;
+	private Validacao validacao;
 
 	public Controladora(){
 		this.repositorioMarcaVeiculo = new MarcaDAO();
@@ -28,12 +31,20 @@ public class Controladora implements InterfaceControladora{
 		this.repositorioSemaforo = new SemaforoDAO();
 		this.repositorioUsuario = new UsuarioDAO();
 		this.repositorioVeiculo = new VeiculoDAO();
+		this.validacao = new Validacao();
 	}
 	
 	
 	//MARCA
 	@Override
 	public String cadastrarMarca(Marca marca) {
+		
+		String campo = marca.getDescricao();
+		
+		if(validacao.validaCampoVazio(campo)){
+			new CampoVasioExpection("descrição");
+		}
+		
 		return repositorioMarcaVeiculo.Inserir(marca);
 		
 	}
