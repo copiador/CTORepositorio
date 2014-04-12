@@ -2,7 +2,8 @@ package br.com.fafica.cto.controladora;
 
 import java.util.ArrayList;
 
-import br.com.fafica.cto.exception.CampoVasioExpection;
+import br.com.fafica.cto.exception.CampoSomenteLetrasException;
+import br.com.fafica.cto.exception.CampoVazioExpection;
 import br.com.fafica.cto.exception.Validacao;
 import br.com.fafica.cto.inter.InterfaceControladora;
 import br.com.fafica.cto.modelo.Marca;
@@ -37,12 +38,15 @@ public class Controladora implements InterfaceControladora{
 	
 	//MARCA
 	@Override
-	public String cadastrarMarca(Marca marca) {
+	public String cadastrarMarca(Marca marca) throws CampoSomenteLetrasException, CampoVazioExpection {
 		
 		String campo = marca.getDescricao();
 		
 		if(validacao.validaCampoVazio(campo)){
-			new CampoVasioExpection("descrição");
+			throw new CampoVazioExpection("descrição");
+		}else if(validacao.validaLetras(campo)){
+			throw new CampoSomenteLetrasException("descrição");
+			
 		}
 		
 		return repositorioMarcaVeiculo.Inserir(marca);

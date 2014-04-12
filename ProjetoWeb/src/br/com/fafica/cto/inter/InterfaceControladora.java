@@ -2,6 +2,8 @@ package br.com.fafica.cto.inter;
 
 import java.util.ArrayList;
 
+import br.com.fafica.cto.exception.CampoSomenteLetrasException;
+import br.com.fafica.cto.exception.CampoVazioExpection;
 import br.com.fafica.cto.modelo.Marca;
 import br.com.fafica.cto.modelo.Motorista;
 import br.com.fafica.cto.modelo.Semaforo;
@@ -11,7 +13,7 @@ import br.com.fafica.cto.modelo.Veiculo;
 public interface InterfaceControladora {
 
 	// MARCA
-	public String cadastrarMarca(Marca marca);
+	public String cadastrarMarca(Marca marca) throws CampoSomenteLetrasException, CampoVazioExpection;
 	public String excluirMarca(Marca marca);
 	public ArrayList<Marca> listarMarca();
 	public String alterarMarca(Marca marca);
