@@ -13,13 +13,17 @@ public class mainteste {
 		
 		
 		
+		
+		
+		
+		
 		try {
 			
 			Controladora controladora = new Controladora();
 			String dados = "dados";
 			
 			Marca marca = new Marca();
-			marca.setDescricao("JESSÉ MARQUES GENUINO#");
+			marca.setDescricao("");
 			
 			
 			controladora.cadastrarMarca(marca);

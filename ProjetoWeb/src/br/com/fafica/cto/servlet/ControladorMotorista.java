@@ -74,6 +74,7 @@ public class ControladorMotorista extends HttpServlet {
 			Motorista motorista =  new Motorista();
 			motorista.setNome(request.getParameter("nome"));
 			motorista.setCPF(request.getParameter("cpf"));
+			System.out.println(motorista.getCPF());
 			motorista.setNascimento(request.getParameter("nascimento"));
 			motorista.setCNH(request.getParameter("cnh"));
 			motorista.setLogradouro(request.getParameter("logradouro"));

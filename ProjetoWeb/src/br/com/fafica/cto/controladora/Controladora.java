@@ -79,7 +79,27 @@ public class Controladora implements InterfaceControladora{
 	//MOTORISTA
 
 	@Override
-	public String cadastrarMotorista(Motorista motorista) {
+	public String cadastrarMotorista(Motorista motorista) throws CampoVazioExpection {
+		
+		String nomeMotorista = motorista.getNome();
+		String cpfMotorista = motorista.getCPF();
+		String dataNascimento = motorista.getNascimento();
+		String numeroCNH = motorista.getCNH();
+		String logradouro = motorista.getLogradouro();
+		int numeroCasa = motorista.getNumero();
+		String bairroMotorista = motorista.getBairro();
+		String complementoMotorista = motorista.getComplemento();
+		String municipioMotorista = motorista.getMunicipio();
+		String estadoUF = motorista.getUF();
+		
+		
+		if(validacao.validaCampoVazio(nomeMotorista)){
+			throw new CampoVazioExpection("nome");
+		}else if (validacao.validaCampoVazio(cpfMotorista)) {
+			throw new CampoVazioExpection("cpf");
+		}
+		
+		
 		return repositorioMotorista.Inserir(motorista);
 		
 	}

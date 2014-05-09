@@ -20,7 +20,7 @@ public interface InterfaceControladora {
 	public Marca pesquisarMarca(Marca marca);
 
 	// MOTORISTA
-	public String cadastrarMotorista(Motorista motorista);
+	public String cadastrarMotorista(Motorista motorista) throws CampoSomenteLetrasException, CampoVazioExpection;
 	public String excluirMotorista(Motorista motorista);
 	public ArrayList<Motorista> listarMotorista();
 	public String alterarMotorista(Motorista motorista);
