@@ -6,5 +6,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.jboss.ide.eclipse.as.classpath.core.ejb3.classpathContainer/JBoss 7.1 Runtime Server"/>
 	<classpathentry kind="lib" path="D:/google drive 18-03-2014/mysql-connector-java-5.1.22-bin.jar"/>
+	<classpathentry kind="lib" path="D:/google drive 18-03-2014/commons-lang3-3.3.2.jar"/>
+	<classpathentry kind="lib" path="D:/google drive 18-03-2014/json-simple-1.1.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

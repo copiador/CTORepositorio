@@ -1,7 +1,10 @@
 package br.com.fafica.cto.servlet;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,19 +13,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
 import br.com.fafica.cto.modelo.Semaforo;
 import br.com.fafica.cto.persistencia.SemaforoDAO;
 
 /**
  * Servlet implementation class ControladorSemaforo
  */
-public class ControladorSemaforo extends HttpServlet {
+public class CopiaControladoraServeltSemaforo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ControladorSemaforo() {
+    public CopiaControladoraServeltSemaforo() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -59,6 +65,7 @@ public class ControladorSemaforo extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@SuppressWarnings("unchecked")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String cmd = request.getParameter("cmd");
@@ -73,9 +80,44 @@ public class ControladorSemaforo extends HttpServlet {
 
 			if (status.equalsIgnoreCase("ok")){
 				
+				ArrayList<Semaforo> arrayListSemaforo = new ArrayList<Semaforo>();
+				arrayListSemaforo = new SemaforoDAO().Listar();
 				
+				JSONObject jsonObject = null;
+				JSONArray array = new JSONArray();
+				
+				for (Semaforo semaforo2 : arrayListSemaforo) {
+					
+					jsonObject = new JSONObject();
+					
+					jsonObject.put("latitude", semaforo2.getLatitude());
+					jsonObject.put("longitude", semaforo2.getLongitude());
+					array.add(jsonObject);
+					
+				}
+				
+				FileWriter writeFile = null;
+
+				try {
+					String dirName = request.getServletContext().getRealPath("/");
+					
+					File f = new File(dirName + "js/pontos.json"); 
+					f.delete();
+					System.out.println(dirName);
+					writeFile = new FileWriter(dirName + "js/pontos.json");
+					writeFile.write(jsonObject.toJSONString());
+					writeFile.close();
+					System.out.println(array.toJSONString());
+				} catch (IOException e) {
+					System.out.println(e.getMessage());
+					e.printStackTrace();
+				}
+				
+				System.out.println(jsonObject);
+				
+					
 				request.setAttribute("mensagem","Semaforo cadastrado com sucesso!");
-				RequestDispatcher dispache = request.getRequestDispatcher("/cadastrarSemaforo.jsp");
+				RequestDispatcher dispache = request.getRequestDispatcher("/CopyofcadastrarSemaforo.jsp");
 				dispache.forward(request, response);
 			} else {
 				resposta.write("<html><head><body>");

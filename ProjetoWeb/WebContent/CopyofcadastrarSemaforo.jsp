@@ -55,20 +55,20 @@
 				<font size="+4" color="#FFFBF0">Cadastro de Semáforo</font>
 			</h2>
 			<form id="cadastrosemaforo" style="background-color: #069"
-				action="ControladorSemaforo?cmd=cadastrar"
+				action="CopiaControladoraServeltSemaforo?cmd=cadastrar"
 				onsubmit="return CadastroSemaforo()" method="post">
 				<table align="center">
 					<tr>
 						<td width="150" height="50" align="center"><b><font
 								size="+1" color="#FFFBF0">Latitude:</font></b></td>
 						<td width="163" align="center"><input type="text"
-							name="txtLatitude" id="txtLatitude"/></td>
+							name="latitude" id="txtLatitude"/></td>
 					</tr>
 					<tr>
 						<td width="150" height="50" align="center"><b><font
 								size="+1" color="#FFFBF0">Longitude:</font></b></td>
 						<td width="163" align="center"><input type="text"
-							name="txtLongitude" id="txtLongitude" /></td>
+							name="longitude" id="txtLongitude" /></td>
 					</tr>
 					<tr>
 						<td width="150" height="50" align="center"><b><font
