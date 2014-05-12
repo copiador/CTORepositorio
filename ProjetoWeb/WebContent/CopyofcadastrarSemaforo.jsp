@@ -11,10 +11,9 @@
 	rel="stylesheet" />
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
-
+<script type="text/javascript" src="menu_jquery.js"></script>
+<link href="styles.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="ValidaCampos.js"></script>
-
-
 <script type="text/javascript"
 	src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -30,25 +29,30 @@
 				response.sendRedirect("index.jsp");
 			}</jsp:scriptlet>
 	<div id="header-wrapper">
-		<div id="header" class="container">
-			<div id="logo">
-				<h1>
-					<a href="home.jsp">CTO</a>
-				</h1>
-				<span><a href="home.jsp">Controle de Tráfego Online</a></span>
-			</div>
-			<div id="menu">
-				<ul>
-					<li><a href="home.jsp" accesskey="1" title="">Homepage</a></li>
-					<li class="current_page_item"><a href="sistema.jsp"
-						accesskey="2" title="">Sistema</a></li>
-
-
-
-					<li><a href="ControladorUsuario?cmd=logout" accesskey="4"
-						title="">Sair</a></li>
-				</ul>
-			</div>
+		<div id='cssmenu'>
+			<ul>
+   				<li class='active'><a href='home.jsp'><span>Home</span></a></li>
+   				<li class='has-sub'><a href='#'><span>Cadastros</span></a>
+      				<ul>
+         				<li><a href='cadastrarUsuario.jsp'><span>Usuários</span></a></li>
+         				<li><a href='cadastrarVeiculo.jsp'><span>Veículos</span></a></li>
+		 				<li><a href='cadastrarSemaforo.jsp'><span>Semáforos</span></a></li>
+		 				<li><a href='cadastrarMotorista.jsp'><span>Motoristas</span></a></li>
+         				<li class='last'><a href='cadastrarMarca.jsp'><span>Marcas</span></a></li>
+      				</ul>
+   				</li>
+   			<li class='has-sub'><a href='#'><span>Listar</span></a>
+      			<ul>
+         			<li><a href='listarUsuario.jsp'><span>Usuários</span></a></li>
+         			<li><a href='listarVeiculo.jsp'><span>Veículos</span></a></li>
+         			<li><a href='listarSemaforo.jsp'><span>Semáforos</span></a></li>
+         			<li><a href='listarMotorista.jsp'><span>Motoristas</span></a></li>
+         			<li class='last'><a href='listarMarca.jsp'><span>Marcas</span></a></li>
+      			</ul>
+   			</li>
+	   			<li class='last'><a href='CopyofcadastrarSemaforo.jsp'><span>Mapa</span></a></li>
+   				<li><a href="ControladorUsuario?cmd=logout">Sair</a></li>
+			</ul>
 		</div>
 		<div style="background-color: #069; text-align: center">
 			<h2 align="center">
@@ -63,8 +67,6 @@
 								size="+1" color="#FFFBF0">Latitude:</font></b></td>
 						<td width="163" align="center"><input type="text"
 							name="latitude" id="txtLatitude"/></td>
-					</tr>
-					<tr>
 						<td width="150" height="50" align="center"><b><font
 								size="+1" color="#FFFBF0">Longitude:</font></b></td>
 						<td width="163" align="center"><input type="text"
@@ -77,8 +79,6 @@
 							name="sentido" value="UNICO" /><b><font size="+1"
 								color="#FFFBF0">UNICO</font></b><input type="radio" name="sentido"
 							value="DUPLO" /><b><font size="+1" color="#FFFBF0">DUPLO</font></b></td>
-					</tr>
-					<tr>
 						<td width="150" height="50" align="center"><b><font
 								size="+1" color="#FFFBF0">Cruzamento:</font></b></td>
 						<td width="163" align="center"><input type="radio"

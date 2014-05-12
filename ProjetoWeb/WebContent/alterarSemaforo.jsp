@@ -13,6 +13,8 @@
 <script type="text/javascript" src="ValidaCampos.js"></script>
 <script type="text/javascript" src="jquery-1.8.3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="menu_jquery.js"></script>
+<link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -25,22 +27,31 @@ if (session == null || session.getAttribute("usuarioLogado") == null) {
 	semaforo = new SemaforoDAO().PesquisaUnica(semaforo);
      %>
     <div id="header-wrapper">
-	<div id="header" class="container">
-		<div id="logo">
-			<h1><a href="home.jsp">CTO</a></h1>
-			<span><a href="home.jsp">Controle de Tráfego Online</a></span>
-		</div>
-		<div id="menu">
+	<div id='cssmenu'>
 			<ul>
-				<li><a href="home.jsp" accesskey="1" title="">Homepage</a></li>
-				<li class="current_page_item"><a href="sistema.jsp" accesskey="2" title="">Sistema</a></li>
-				
-				
-				
-                <li><a href="ControladorUsuario?cmd=logout" accesskey="4" title="">Sair</a></li>
+   				<li class='active'><a href='home.jsp'><span>Home</span></a></li>
+   				<li class='has-sub'><a href='#'><span>Cadastros</span></a>
+      				<ul>
+         				<li><a href='cadastrarUsuario.jsp'><span>Usuários</span></a></li>
+         				<li><a href='cadastrarVeiculo.jsp'><span>Veículos</span></a></li>
+		 				<li><a href='cadastrarSemaforo.jsp'><span>Semáforos</span></a></li>
+		 				<li><a href='cadastrarMotorista.jsp'><span>Motoristas</span></a></li>
+         				<li class='last'><a href='cadastrarMarca.jsp'><span>Marcas</span></a></li>
+      				</ul>
+   				</li>
+   			<li class='has-sub'><a href='#'><span>Listar</span></a>
+      			<ul>
+         			<li><a href='listarUsuario.jsp'><span>Usuários</span></a></li>
+         			<li><a href='listarVeiculo.jsp'><span>Veículos</span></a></li>
+         			<li><a href='listarSemaforo.jsp'><span>Semáforos</span></a></li>
+         			<li><a href='listarMotorista.jsp'><span>Motoristas</span></a></li>
+         			<li class='last'><a href='listarMarca.jsp'><span>Marcas</span></a></li>
+      			</ul>
+   			</li>
+	   			<li class='last'><a href='CopyofcadastrarSemaforo.jsp'><span>Mapa</span></a></li>
+   				<li><a href="ControladorUsuario?cmd=logout">Sair</a></li>
 			</ul>
 		</div>
-	</div>
 	<div style="background-color:#069; text-align: center">
 		<h2 align="center"><font size="+4" color="#FFFBF0">Alterar Semáforo</font></h2>
 		<form id="cadastrosemaforo" style="background-color:#069"

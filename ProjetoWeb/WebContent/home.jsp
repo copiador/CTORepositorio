@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
+<title>CTO</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
@@ -11,6 +11,9 @@
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="menu_jquery.js"></script>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+
 
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
@@ -20,29 +23,39 @@
 if (session == null || session.getAttribute("usuarioLogado") == null) {
  response.sendRedirect("index.jsp");
 }</jsp:scriptlet>
-<div id="header-wrapper">
-	<div id="header" class="container">
-		<div id="logo">
-			<h1><a href="home.jsp">CTO</a></h1>
-			<span><a href="home.jsp	">Controle de TrÃ¡fego Online</a></span>
-		</div>
-		<div id="menu">
-			<ul>
-				<li class="current_page_item"><a href="home.jsp" accesskey="1" title="">Homepage</a></li>
-				<li><a href="sistema.jsp" accesskey="2" title="">Sistema</a></li>
-				<li><a href="CopyofcadastrarSemaforo.jsp" accesskey="3" title="">Google Maps - Caruaru</a></li>				
-                <li><a href="ControladorUsuario?cmd=logout" accesskey="4" title="">Sair</a></li>
-			</ul>
-		</div>
-	</div>
+
+<div id='cssmenu'>
+<ul>
+   <li class='active'><a href='home.jsp'><span>Home</span></a></li>
+   <li class='has-sub'><a href='#'><span>Cadastros</span></a>
+      <ul>
+         <li><a href='cadastrarUsuario.jsp'><span>Usuários</span></a></li>
+         <li><a href='cadastrarVeiculo.jsp'><span>Veículos</span></a></li>
+		 <li><a href='cadastrarSemaforo.jsp'><span>Semáforos</span></a></li>
+		 <li><a href='cadastrarMotorista.jsp'><span>Motoristas</span></a></li>
+         <li class='last'><a href='cadastrarMarca.jsp'><span>Marcas</span></a></li>
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Listar</span></a>
+      <ul>
+         <li><a href='listarUsuario.jsp'><span>Usuários</span></a></li>
+         <li><a href='listarVeiculo.jsp'><span>Veículos</span></a></li>
+         <li><a href='listarSemaforo.jsp'><span>Semáforos</span></a></li>
+         <li><a href='listarMotorista.jsp'><span>Motoristas</span></a></li>
+         <li class='last'><a href='listarMarca.jsp'><span>Marcas</span></a></li>
+      </ul>
+   </li>
+   <li class='last'><a href='CopyofcadastrarSemaforo.jsp'><span>Mapa</span></a></li>
+   <li><a href="ControladorUsuario?cmd=logout">Sair</a></li>
+</ul>
 </div>
 <div id="header-featured"> </div>
 <div id="banner-wrapper">
 	<div id="banner" class="container">
-		<p>Este Ã© o <strong>CTO</strong>, um sistema de controle para trÃ¡fego urbano. Tendo em vista viabilizar atendimentos de emergÃªncia. Utilizando altas tecnologias GPS.</p>
+		<p>Este é o <strong>CTO</strong>, um sistema de controle para tráfego urbano. Tendo em vista viabilizar atendimentos de emergência. Utilizando a tecnologia GPS.</p>
 	</div>
 </div>
 <div id="copyright" class="container">
-	<p>Developed By: UppSoftware (c) 2013 UppSoftware.ltda . Todos os direitos reservados. | Design by <a href="http://www.facebook.com.br/diego.vaz.gomes" rel="nofollow">DiÃªgo Vaz Gomes</a>.</p>
+	<p>Developed By: UppSoftware (c) 2013 UppSoftware.ltda . Todos os direitos reservados.</p>
 </div></body>
 </html>

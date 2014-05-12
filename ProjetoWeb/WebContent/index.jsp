@@ -10,21 +10,18 @@
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="menu_jquery.js"></script>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+<link href="buttons.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="ValidaCampos.js"></script>
 </head>
 <body>
 	<div id="header-wrapper">
-	<div id="header" class="container">
-		<div id="logo">
-			<h1><a href="home.jsp">CTO</a></h1>
-			<span><a href="home.jsp">Controle de Tráfego Online</a></span>
-		</div>
-		<div id="menu">
-			<ul>
-				<li class="current_page_item"><a href="index.jsp" accesskey="1" title="">Login</a></li>
-			</ul>
-		</div>
-	</div>
+	<div id='cssmenu'>
+<ul>
+   <li class='active'><a href='index.jsp'><span>Login</span></a></li>
+</ul>
+</div>
 	</div>
 	<div style="background-color:#069; text-align: center">
 		<h2 align="center"><font size="+4" color="#FFFBF0">Acesso ao Sistema</font></h2>
@@ -46,8 +43,8 @@
 		<br />
 		<table align="center">
 			<tr>
-				<td align="center"><input type="submit" value="Entrar"></td>
-				<td align="center"><input type="reset" value="Cancelar"></td>
+				<td align="center"><input type="submit" class="buttons" value="Entrar"></td>
+				<td align="center"><input type="reset" class="buttons" value="Cancelar"></td>
 			</tr>
 		</table>
 	</form>
