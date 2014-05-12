@@ -15,6 +15,7 @@
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="menu_jquery.js"></script>
 <link href="styles.css" rel="stylesheet" type="text/css" />
+<link href="buttons.css" rel="stylesheet" type="text/css" />
 <script>     
 function confirmExclusao(latitude,longitude) {     
    if (confirm("Tem certeza que deseja excluir o usuario?")) {
@@ -96,7 +97,7 @@ if (session == null || session.getAttribute("usuarioLogado") == null) {
 	<font size="+1" color="#FFFBF0" ><%="Foram encontrados "+cont+" registros" %></font>
 	<br>
 	<br>
-	<a href="/ProjetoWeb/cadastrarSemaforo.jsp"><font size="+1" color="#FFFBF0" >Novo Cadastro</font></a>
+	<a href="/ProjetoWeb/cadastrarSemaforo.jsp" class="buttons">Novo Semáforo</a>
 	</div>
 	</div>
 	<div id="copyright" class="container">

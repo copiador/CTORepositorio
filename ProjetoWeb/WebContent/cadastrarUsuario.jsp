@@ -154,11 +154,10 @@ if (session == null || session.getAttribute("usuarioLogado") == null) {
 		
 		<p align="center"><b><font color="white">${mensagem }</font></b><p>
 		
-	
+	</div>
+	</div>
 	<div id="copyright" class="container">
-	<p>Developed By: UppSoftware (c) 2013 UppSoftware.ltda . Todos os direitos reservados. | Design by <a href="http://www.facebook.com.br/diego.vaz.gomes" rel="nofollow">Diêgo Vaz Gomes</a>.</p>
+	<p>Developed By: UppSoftware (c) 2013 UppSoftware.ltda . Todos os direitos reservados.</p>
 		</div>
-	</div>
-	</div>
 </body>
 </html>

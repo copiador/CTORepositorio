@@ -14,6 +14,7 @@
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="buttons.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="menu_jquery.js"></script>
 <link href="styles.css" rel="stylesheet" type="text/css" />
 <script>     
@@ -88,16 +89,12 @@ function confirmExclusao(id) {
 	<font size="+1" color="#FFFBF0"><%="Foram encontrados "+cont+" registros" %></font>
 	<br>
 	<br>
-	<a href="/ProjetoWeb/cadastrarMarca.jsp"><font size="+1" color="#FFFBF0">Novo Cadastro</font></a>
+	<a href="/ProjetoWeb/cadastrarMarca.jsp" class="buttons">Nova Marca</a>
 	</div>
 	</div>
 	<div id="copyright" class="container">
-		<p>
-			Developed By: UppSoftware (c) 2013 UppSoftware.ltda . Todos os
-			direitos reservados. | Design by <a
-				href="http://www.facebook.com.br/diego.vaz.gomes" rel="nofollow">Diêgo
-				Vaz Gomes</a>.
-		</p>
+		<p>Developed By: UppSoftware (c) 2013 UppSoftware.ltda . Todos os
+			direitos reservados.</p>
 	</div>
 </body>
 </html>
