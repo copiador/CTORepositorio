@@ -11,6 +11,7 @@
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="menu_jquery.js"></script>
 <link href="styles.css" rel="stylesheet" type="text/css" />
+<link href="buttons.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="ValidaCampos.js"></script>
 <script type="text/javascript" src="jquery-1.8.3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="jquery.maskedinput.min.js"></script>
@@ -145,8 +146,8 @@ if (session == null || session.getAttribute("usuarioLogado") == null) {
 			<br></br>
 			<table align="center">
 				<tr>
-					<td align="justify"><input type="submit" value="Cadastrar" />
-						<input type="reset" value="Cancelar" /></td>
+					<td align="justify"><input type="submit" class="buttons" value="Cadastrar" />
+						<input type="reset" class="buttons" value="Cancelar" /></td>
 				</tr>
 			</table>
 		</form>

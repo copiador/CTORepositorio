@@ -13,6 +13,7 @@
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="menu_jquery.js"></script>
 <link href="styles.css" rel="stylesheet" type="text/css" />
+<link href="buttons.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="ValidaCampos.js"></script>
 <script type="text/javascript"
 	src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
@@ -90,8 +91,8 @@
 
 				<table align="center">
 					<tr>
-						<td align="justify"><input type="submit" value="Cadastrar" />
-							<input type="Reset" value="Cancelar" />
+						<td align="justify"><input type="submit" class="buttons" value="Cadastrar" />
+							<input type="Reset" class="buttons" value="Cancelar" />
 				</table>
 				<div id="mapa" style="width: 80%; height: 400px; margin: auto; margin-top:30px; border: 3px solid #ccc;"></div>
 			</form>

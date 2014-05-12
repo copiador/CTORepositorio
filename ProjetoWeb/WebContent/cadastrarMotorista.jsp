@@ -12,6 +12,7 @@
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="menu_jquery.js"></script>
 <link href="styles.css" rel="stylesheet" type="text/css" />
+<link href="buttons.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="ValidaCampos.js"></script>
 <script type="text/javascript" src="jquery-1.8.3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="jquery.maskedinput.min.js"></script>
@@ -121,14 +122,13 @@ if (session == null || session.getAttribute("usuarioLogado") == null) {
 			<form id="cadastromotorista" style="background-color: #069"
 				action="ControladorMotorista?cmd=cadastrar"
 				onsubmit="return CadastroMotorista()" method="post">
+				<h3><font size="+2" color="#FFFBF0">Dados Pessoais</font></h3>
 				<table align="center">
 					<tr>
 						<td width="150" height="50" align="center"><b><font
 								size="+1" color="#FFFBF0">Nome :*</font></b></td>
 						<td width="250" align="center"><input type="text" name="nome"
 							onchange="up(this)" /></td>
-					</tr>
-					<tr>
 						<td width="150" height="50" align="center"><b><font
 								size="+1" color="#FFFBF0">CPF :*</font></b></td>
 						<td width="250" align="center"><input type="text" name="cpf"
@@ -140,61 +140,53 @@ if (session == null || session.getAttribute("usuarioLogado") == null) {
 								size="+1" color="#FFFBF0">Data de Nascimento:*</font></b></td>
 						<td width="250" align="center"><input type="text"
 							name="nascimento" id="nascimento" onchange="up(this)" /></td>
-					</tr>
-
-					<tr>
 						<td width="150" height="50" align="center"><b><font
 								size="+1" color="#FFFBF0">Número CNH:*</font></b></td>
 						<td width="250" align="center"><input type="text" name="cnh" id="cnh"
 							onchange="up(this)" /></td>
 					</tr>
 				</table>
-
+				<br/><h3><font size="+2" color="#FFFBF0">Endereço</font></h3>
 				<table align="center">
 					<tr>
 						<td width="150" height="50" align="center"><b><font
 								size="+1" color="#FFFBF0">Logradouro:*</font></b></td>
 						<td width="250" align="center"><input type="text"
 							name="logradouro" onchange="up(this)" /></td>
-					</tr>
-					<tr>
 						<td width="150" height="50" align="center"><b><font
 								size="+1" color="#FFFBF0">Número:*</font></b></td>
 						<td width="250" align="center"><input type="text"
 							name="numero" id="numero" onchange="up(this)" /></td>
 					</tr>
+					
 					<tr>
 						<td width="150" height="50" align="center"><b><font
 								size="+1" color="#FFFBF0">Bairro:*</font></b></td>
 						<td width="250" align="center"><input type="text"
 							name="bairro" onchange="up(this)" /></td>
-					</tr>
-					<tr>
 						<td width="150" height="50" align="center"><b><font
 								size="+1" color="#FFFBF0">Complemento:</font></b></td>
 						<td width="250" align="center"><input type="text"
 							name="complemento" onchange="up(this)" /></td>
 					</tr>
-
+					
 					<tr>
 						<td width="150" height="50" align="center"><b><font
 								size="+1" color="#FFFBF0">Município:*</font></b></td>
 						<td width="250" align="center"><input type="text"
 							name="municipio" onchange="up(this)" /></td>
-					</tr>
-
-					<tr>
 						<td width="150" height="50" align="center"><b><font
 								size="+1" color="#FFFBF0">UF:*</font></b></td>
 						<td width="250" align="center"><input type="text" name="uf" id="uf"
 							onchange="up(this)" /></td>
 					</tr>
+
 				</table>
 
 				<table align="center">
 					<tr>
-						<td align="justify"><input type="submit" value="Cadastrar" />
-							<input type="Reset" value="Cancelar" />
+						<td align="justify"><input type="submit" class="buttons" value="Cadastrar" />
+							<input type="Reset" class="buttons" value="Cancelar" />
 				</table>
 
 
