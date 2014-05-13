@@ -59,6 +59,7 @@ public class ControladorSemaforo extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String cmd = request.getParameter("cmd");
@@ -72,7 +73,6 @@ public class ControladorSemaforo extends HttpServlet {
 			String status = new SemaforoDAO().Inserir(semaforo);
 
 			if (status.equalsIgnoreCase("ok")){
-				
 				
 				request.setAttribute("mensagem","Semaforo cadastrado com sucesso!");
 				RequestDispatcher dispache = request.getRequestDispatcher("/cadastrarSemaforo.jsp");

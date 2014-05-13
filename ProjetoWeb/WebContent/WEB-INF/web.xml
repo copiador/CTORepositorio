@@ -71,12 +71,12 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>CopiaControladoraServeltSemaforo</display-name>
-    <servlet-name>CopiaControladoraServeltSemaforo</servlet-name>
-    <servlet-class>br.com.fafica.cto.servlet.CopiaControladoraServeltSemaforo</servlet-class>
+    <display-name>ControladorMapaPersonalizado</display-name>
+    <servlet-name>ControladorMapaPersonalizado</servlet-name>
+    <servlet-class>br.com.fafica.cto.servlet.ControladorMapaPersonalizado</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>CopiaControladoraServeltSemaforo</servlet-name>
-    <url-pattern>/CopiaControladoraServeltSemaforo</url-pattern>
+    <servlet-name>ControladorMapaPersonalizado</servlet-name>
+    <url-pattern>/ControladorMapaPersonalizado</url-pattern>
   </servlet-mapping>
 </web-app>

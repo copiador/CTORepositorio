@@ -13,7 +13,6 @@
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
-<link href="buttons.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="menu_jquery.js"></script>
 <link href="styles.css" rel="stylesheet" type="text/css" />
 <script>     
@@ -57,7 +56,7 @@ if (session == null || session.getAttribute("usuarioLogado") == null) {
          <li class='last'><a href='listarMarca.jsp'><span>Marcas</span></a></li>
       </ul>
    </li>
-   <li class='last'><a href='CopyofcadastrarSemaforo.jsp'><span>Mapa</span></a></li>
+   <li class='last'><a href='mapaPontosPersonalizados.jsp'><span>Mapa</span></a></li>
    <li><a href="ControladorUsuario?cmd=logout">Sair</a></li>
 </ul>
 </div>
@@ -108,7 +107,7 @@ if (session == null || session.getAttribute("usuarioLogado") == null) {
 	<font size="+1" color="#FFFBF0"><%="Foram encontrados "+cont+" registros" %></font>
 	<br>
 	<br>
-	<a href="/ProjetoWeb/cadastrarMotorista.jsp" class="buttons">Novo Motorista</a>
+	<a href="/ProjetoWeb/cadastrarMotorista.jsp"><font size="+1" color="#FFFBF0">Novo Cadastro</font></a>
 	</div>
 	</div>
 	<div id="copyright" class="container">

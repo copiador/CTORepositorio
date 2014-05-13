@@ -109,7 +109,7 @@ if (session == null || session.getAttribute("usuarioLogado") == null) {
          			<li class='last'><a href='listarMarca.jsp'><span>Marcas</span></a></li>
       			</ul>
    			</li>
-	   			<li class='last'><a href='CopyofcadastrarSemaforo.jsp'><span>Mapa</span></a></li>
+	   			<li class='last'><a href='mapaPontosPersonalizados.jsp'><span>Mapa</span></a></li>
    				<li><a href="ControladorUsuario?cmd=logout">Sair</a></li>
 			</ul>
 		</div>
